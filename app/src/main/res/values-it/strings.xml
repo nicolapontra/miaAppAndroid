@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pontrandolfo2</string>
+    <string name="hello_world">Ciao a tutti</string>
+    <string name="button_welcome">Benvenuto, %1$s</string>
+    <string name="button_goodbye">Arrivederci</string>
+    <string name="btnPassaAMappa">Vai alla mappa</string>
+    <string name="btnApriAMappa">Apri Mappa</string>
+    <string name="btn_torre">Torre Hanoi</string>
+    <string name="btnImpostaDIB">Imposta DIB</string>
+    <string name="btnBack">Indietro</string>
+
+    <string name="btn_to_red">Passa a Red</string>
+    <string name="btn_to_blue">Passa a Blue</string>
+    <string name="btn_to_home">Home</string>
+    <string name="btn_share">Condividi</string>
+
+
+    <plurals name="numberOfDiscs">
+        <item quantity="one">%d pezzo</item>
+        <item quantity="other">%d pezzi</item>
+    </plurals>
+
+    <plurals name="numberOfSteps">
+        <item quantity="one">Ping-Pong: le activity hanno effettuato un passaggio</item>
+        <item quantity="other">Ping-Pong: le activity hanno effettuato %d passaggi</item>
+    </plurals>
+
+    <string-array name="Esami">
+        <item>Sviluppo Mobile SW</item>
+        <item>Analisi</item>
+        <item>Reti di calcolatori</item>
+        <item>PIU</item>
+        <item>Fisica</item>
+        <item>Programmazione2</item>
+        <item>Programmazione1</item>
+        <item>SISAG</item>
+    </string-array>
+    <string-array name="Dettaglio">
+        <item>nome corso: Sviluppo Mobile SW, docente: Buono P., data superamento: ND, voto ND, CFU 9</item>
+        <item>nome corso: Analisi matematica, docente: DAmbrosio, data superamento: 1 dicembre 2017, voto 26, CFU 9</item>
+        <item>nome corso:Reti, docente: Novielli N., data superamento: 24 dicembre 2016, voto 30L, CFU 6</item>
+        <item>nome corso:PIU, docente: De Carolis, data superamento: 24 novembre 2016, voto: 30L, CFU: 6</item>
+        <item>nome corso:Fisica, docente: Fusco P., data superamento: 21 dicembre 2017, voto: 20, CFU: 6</item>
+        <item>nome corso:Programmazione2, docente: Fanizzi, data superamento: 10 Gennaio 2017, voto: 27, CFU: 9</item>
+        <item>nome corso:Programmazione1, docente: Di Mauro, data superamento: 08 dicembre 2016, voto: 23, CFU: 9</item>
+        <item>nome corso:SISAG, docente: De Carolis, data superamento: 24 aprile 2018, voto: 20, CFU: 6</item>
+    </string-array>
+
+</resources>

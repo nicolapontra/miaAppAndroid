@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pontrandolfo2</string>
+    <string name="hello_world">Hello World</string>
+    <string name="button_welcome">Welcome, %1$s</string>
+    <string name="button_goodbye">Goodbye</string>
+    <string name="btnPassaAMappa">Go Map launcher</string>
+    <string name="btnApriAMappa">Open Map</string>
+    <string name="btnImpostaDIB">Set DIB</string>
+    <string name="btn_torre">Hanoi Tower</string>
+    <string name="btnBack">Back</string>
+
+    <string name="btn_to_red">Go to Red</string>
+    <string name="btn_to_blue">Go to Blue</string>
+    <string name="btn_to_home">Home</string>
+    <string name="btn_share">Share</string>
+
+    <plurals name="numberOfDiscs">
+        <item quantity="one">%d piece</item>
+        <item quantity="other">%d pieces</item>
+    </plurals>
+
+    <plurals name="numberOfSteps">
+        <item quantity="one">Ping-Pong: the activities have made one step</item>
+        <item quantity="other">Ping-Pong:the activities have made %d steps</item>
+    </plurals>
+
+    <string-array name="Esami">
+        <item>Sviluppo Mobile SW</item>
+        <item>Analisi</item>
+        <item>Reti di calcolatori</item>
+        <item>PIU</item>
+        <item>Fisica</item>
+        <item>Programmazione2</item>
+        <item>Programmazione1</item>
+        <item>SISAG</item>
+    </string-array>
+    <string-array name="Dettaglio">
+        <item>name course: Sviluppo Mobile SW, teacher: Buono P., exam-date: ND, grade: ND, CFU: 9</item>
+        <item>name course: Analisi matematica, teacher: DAmbrosio,exam-date: 1 dicembre 2017,grade: 26, CFU: 9</item>
+        <item>name course:Reti, teacher: Novielli N., exam-date: 24 dicembre 2016, grade: 30L, CFU: 6</item>
+        <item>name course:PIU, teacher: De Carolis, exam-date: 24 novembre 2016, grade: 30L, CFU: 6</item>
+        <item>name course:Fisica, teacher: Fusco P., exam-date: 21 dicembre 2017, grade: 20, CFU: 6</item>
+        <item>name course:Programmazione2, teacher: Fanizzi, exam-date: 10 Gennaio 2017, grade: 27, CFU: 9</item>
+        <item>name course:Programmazione1, teacher: Di Mauro, exam-date: 08 dicembre 2016, grade: 23, CFU: 9</item>
+        <item>name course:SISAG, teacher: De Carolis, exam-date: 24 aprile 2018, grade: 20, CFU: 6</item>
+    </string-array>
+
+</resources>

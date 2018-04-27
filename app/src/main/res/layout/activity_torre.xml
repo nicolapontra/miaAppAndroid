@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="false">
+
+    <TextView
+        android:id="@+id/textTorreUno"
+        android:layout_width="110dp"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_marginTop="4dp"
+        android:rotation="180"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/textTorreDue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTorreDue"
+        android:layout_width="110dp"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_marginTop="4dp"
+        android:rotation="180"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/textTorreTre"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textTorreUno"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textTorreTre"
+        android:layout_width="110dp"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="4dp"
+        android:rotation="180"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnToSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnToFirst"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPezziUno" />
+
+    <Button
+        android:id="@+id/btnToFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnToThird"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnToSecond"
+        app:layout_constraintTop_toBottomOf="@+id/txtPezziDue"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnToThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnReturnSecond"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnToFirst"
+        app:layout_constraintTop_toBottomOf="@+id/txtPezziDue"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnReturnSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnToThird"
+        app:layout_constraintTop_toBottomOf="@+id/txtPezziTre"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtPezziDue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/txtPezziTre"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toEndOf="@+id/txtPezziUno"
+        app:layout_constraintTop_toBottomOf="@+id/textTorreDue" />
+
+    <TextView
+        android:id="@+id/txtPezziUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTorreUno" />
+
+    <TextView
+        android:id="@+id/txtPezziTre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="108dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTorreTre" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="121dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/btnBack"
+        app:layout_constraintTop_toBottomOf="@+id/btnToSecond"
+        tools:layout_editor_absoluteX="58dp" />
+
+</android.support.constraint.ConstraintLayout>
