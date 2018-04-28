@@ -12,7 +12,7 @@ import android.widget.TextView;
  */
 
 public class BlueActivity extends AppCompatActivity {
-
+    //prova mia
     //private static final int RED_REQUEST = 2;
     private static int contatore = 1;
     TextView showCount;
