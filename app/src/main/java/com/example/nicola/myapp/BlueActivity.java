@@ -16,7 +16,7 @@ public class BlueActivity extends AppCompatActivity {
     //private static final int RED_REQUEST = 2;
     private static int contatore = 1;
     TextView showCount;
-    //esempio di modifica
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
