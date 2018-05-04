@@ -45,5 +45,7 @@
         <item>name course:Programmazione1, teacher: Di Mauro, exam-date: 08 dicembre 2016, grade: 23, CFU: 9</item>
         <item>name course:SISAG, teacher: De Carolis, exam-date: 24 aprile 2018, grade: 20, CFU: 6</item>
     </string-array>
+    <string name="title_esame_list">Esami</string>
+    <string name="title_esame_detail">Esame Detail</string>
 
 </resources>

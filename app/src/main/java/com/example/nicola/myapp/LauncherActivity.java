@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
 
+import com.example.nicola.myapp.master_detail.EsameListActivity;
+
 public class LauncherActivity extends AppCompatActivity {
 
     TextView textToShow;
@@ -40,7 +42,29 @@ public class LauncherActivity extends AppCompatActivity {
 
         Button btnGoEsamiFrag = (Button) findViewById(R.id.btnEsamiFrag);
         btnGoEsamiFrag.setOnClickListener(goEsamiFrag);
+
+        Button btnGoEsamiMaster = (Button) findViewById(R.id.btnEsamiMaster);
+        btnGoEsamiMaster.setOnClickListener(goEsamiMaster);
+
+
     }
+    public View.OnClickListener goEsamiMaster = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent vaiAEsami = new Intent(LauncherActivity.this, EsameListActivity.class);
+            startActivity(vaiAEsami);
+        }
+    };
+
+    public View.OnClickListener goSchedaStudente = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+         //   Intent vaiAScheda = new Intent(LauncherActivity.this, SchedaStudente.class);
+         //   startActivity(vaiAScheda);
+        }
+    };
+
+
     public View.OnClickListener goEsami = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
