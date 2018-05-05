@@ -46,6 +46,9 @@ public class LauncherActivity extends AppCompatActivity {
         Button btnGoEsamiMaster = (Button) findViewById(R.id.btnEsamiMaster);
         btnGoEsamiMaster.setOnClickListener(goEsamiMaster);
 
+        Button btnGoScheda = (Button) findViewById(R.id.btnSchedaStudente);
+        btnGoScheda.setOnClickListener(goSchedaStudente);
+
 
     }
     public View.OnClickListener goEsamiMaster = new View.OnClickListener() {
@@ -59,8 +62,8 @@ public class LauncherActivity extends AppCompatActivity {
     public View.OnClickListener goSchedaStudente = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-         //   Intent vaiAScheda = new Intent(LauncherActivity.this, SchedaStudente.class);
-         //   startActivity(vaiAScheda);
+           Intent vaiAScheda = new Intent(LauncherActivity.this, SchedaStudenteActivity.class);
+            startActivity(vaiAScheda);
         }
     };
 

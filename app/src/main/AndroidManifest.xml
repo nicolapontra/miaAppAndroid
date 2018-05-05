@@ -33,11 +33,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".RedActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".EsamiActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -66,7 +68,18 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nicola.myapp.master_detail.EsameListActivity" />
+
         </activity>
+
+        <activity android:name=".SchedaStudenteActivity">
+            <intent-filter>
+                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+
     </application>
 
 </manifest>
