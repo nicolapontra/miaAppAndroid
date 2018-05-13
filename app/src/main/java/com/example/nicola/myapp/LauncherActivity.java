@@ -5,10 +5,14 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.nicola.myapp.master_detail.EsameListActivity;
 
@@ -49,8 +53,55 @@ public class LauncherActivity extends AppCompatActivity {
         Button btnGoScheda = (Button) findViewById(R.id.btnSchedaStudente);
         btnGoScheda.setOnClickListener(goSchedaStudente);
 
-
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setLogo(R.drawable.ic_action_name);
+        myToolbar.setTitle("Pontrandolfo Nicola");
+        myToolbar.setSubtitle("610790");
+        setSupportActionBar(myToolbar);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            int durata = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(getApplicationContext(),"Non è importante quante volte " +
+                    " vai al tappeto se hai sempre la forza di rialzarti",durata);
+            toast.show();
+            return true;
+        }
+        if (id == R.id.action_compass) {
+            int durata = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(getApplicationContext(),"Non è importante quante volte " +
+                    " vai al tappeto se hai sempre la forza di rialzarti",durata);
+            toast.show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     public View.OnClickListener goEsamiMaster = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -58,6 +109,8 @@ public class LauncherActivity extends AppCompatActivity {
             startActivity(vaiAEsami);
         }
     };
+
+
 
     public View.OnClickListener goSchedaStudente = new View.OnClickListener() {
         @Override

@@ -70,6 +70,12 @@
                 android:inputType="textPersonName"
                 android:text="02/04/1988" />
 
+            <Button
+                android:id="@+id/btnChangeData"
+                android:layout_width="182dp"
+                android:layout_height="wrap_content"
+                android:text="SELEZIONA DATA" />
+
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"

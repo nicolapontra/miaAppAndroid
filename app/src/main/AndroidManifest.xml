@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LauncherActivity">
+        <activity android:name=".LauncherActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,15 +57,13 @@
 
         <activity
             android:name=".master_detail.EsameListActivity"
-            android:label="@string/title_esame_list"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/title_esame_list">
         </activity>
 
         <activity
             android:name=".master_detail.EsameDetailActivity"
             android:label="@string/title_esame_detail"
-            android:parentActivityName=".master_detail.EsameListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".master_detail.EsameListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nicola.myapp.master_detail.EsameListActivity" />

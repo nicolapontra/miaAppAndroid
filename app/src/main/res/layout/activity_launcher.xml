@@ -1,110 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.nicola.myapp.LauncherActivity">
 
-    <TextView
-        android:id="@+id/TextView_text"
+<TableLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.example.nicola.myapp.LauncherActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="@string/button_welcome"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         android:paddingRight="2dip"
+        android:stretchColumns="1,0">
 
-    <Button
-        android:id="@+id/buttonMap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/btnPassaAMappa"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextView_text" />
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_bright"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <Button
-        android:id="@+id/btnTorreHanoi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/btn_torre"
-        app:layout_constraintBottom_toTopOf="@+id/btnPingPong"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextView_text"
-        app:layout_constraintVertical_bias="0.0" />
+        <TableRow android:layout_marginTop="80dp">
+            <TextView
+                android:id="@+id/TextView_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_welcome"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/buttonMap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnPingPong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Ping Pong"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMap"
-        tools:layout_editor_absoluteX="158dp" />
+        </TableRow>
+        <TableRow>
 
-    <Button
-        android:id="@+id/btnEsamiListActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Esami"
-        app:layout_constraintEnd_toStartOf="@+id/btnEsamiFrag"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="289dp" />
+        </TableRow>
+        <TableRow android:layout_marginTop="50dp">
+            <Button
+                android:id="@+id/buttonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnPassaAMappa"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toTopOf="@+id/btnTorreHanoi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TextView_text"
+                android:layout_column="1"/>
+        </TableRow>
 
-    <Button
-        android:id="@+id/btnEsamiFrag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="44dp"
-        android:text="ESAMI fragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPingPong" />
+        <TableRow>
 
-    <Button
-        android:id="@+id/btnEsamiMaster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="ESAMI M/D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEsamiListActivity"
-        app:layout_constraintVertical_bias="0.49" />
+        <Button
+            android:id="@+id/btnTorreHanoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_torre"
+            app:layout_constraintBottom_toTopOf="@+id/btnEsamiFrag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnPingPong"
+            app:layout_constraintTop_toBottomOf="@+id/buttonMap"
+            android:layout_column="0"/>
 
-    <Button
-        android:id="@+id/btnSchedaStudente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="SCHEDA STUDENTE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toEndOf="@+id/btnEsamiMaster"
-        app:layout_constraintTop_toBottomOf="@+id/btnEsamiFrag"
-        app:layout_constraintVertical_bias="0.49" />
+        <Button
+            android:id="@+id/btnPingPong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ping Pong"
+            app:layout_constraintBottom_toTopOf="@+id/btnEsamiListActivity"
+            app:layout_constraintEnd_toStartOf="@+id/btnTorreHanoi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonMap" />
 
-</android.support.constraint.ConstraintLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnEsamiListActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esami"
+                app:layout_constraintBottom_toTopOf="@+id/btnEsamiMaster"
+                app:layout_constraintEnd_toStartOf="@+id/btnEsamiFrag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPingPong" />
+
+            <Button
+                android:id="@+id/btnEsamiFrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESAMI fragment"
+                app:layout_constraintBottom_toTopOf="@+id/btnSchedaStudente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnEsamiListActivity"
+                app:layout_constraintTop_toBottomOf="@+id/btnTorreHanoi" />
+
+        </TableRow>
+        <Button
+            android:id="@+id/btnEsamiMaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ESAMI M/D"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSchedaStudente"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEsamiListActivity" />
+        <TableRow>
+        <Button
+            android:id="@+id/btnSchedaStudente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCHEDA STUDENTE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnEsamiMaster"
+            app:layout_constraintTop_toBottomOf="@+id/btnEsamiFrag"
+            android:layout_column="1"/>
+        </TableRow>
+
+</TableLayout>

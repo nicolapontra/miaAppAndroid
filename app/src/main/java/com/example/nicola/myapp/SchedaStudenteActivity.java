@@ -1,12 +1,16 @@
 package com.example.nicola.myapp;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -29,9 +33,15 @@ public class SchedaStudenteActivity extends AppCompatActivity {
     RadioButton maschio;
     RadioButton femmina;
     RatingBar rating;
-
-
     ToggleButton modifica;
+
+    //------------------------------------------------------------------------
+    Button changeData;
+    static final int DATE_DIALOG_ID = 0;
+    private int mYear;
+    private int mMonth;
+    private int mDay;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +78,48 @@ public class SchedaStudenteActivity extends AppCompatActivity {
 
         modifica = (ToggleButton) findViewById(R.id.toggleButton);
         modifica.setOnClickListener(abilitaconferma);
+//----------------------------------------------------------------------------------------
+        changeData = (Button) findViewById(R.id.btnChangeData);
+        // add a click listener to the button
+        changeData.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                showDialog(DATE_DIALOG_ID);
+            }
+        });
 
+    }//end onCreate------------------_______-------------------_____________-------------------
+
+    // the callback received when the user "sets" the date in the dialog
+    private DatePickerDialog.OnDateSetListener mDateSetListener =
+            new DatePickerDialog.OnDateSetListener() {
+
+                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                    mYear = year;
+                    mMonth = monthOfYear;
+                    mDay = dayOfMonth;
+                    updateDisplay();
+                }
+            };
+    // updates the date in the TextView
+    private void updateDisplay() {
+       edit3.setText(
+                new StringBuilder()
+                        .append(mDay).append("-")
+                        .append(mMonth + 1).append("-")
+                        .append(mYear).append(" "));
     }
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        switch (id) {
+            case DATE_DIALOG_ID:
+                return new DatePickerDialog(this,
+                        mDateSetListener,
+                        mYear, mMonth, mDay);
+        }
+        return null;
+    }
+
+    //-----------------------------------------------------------------------------------
 
     public View.OnClickListener abilitaconferma = new View.OnClickListener(){
         @Override
