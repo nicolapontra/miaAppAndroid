@@ -47,5 +47,7 @@
     </string-array>
     <string name="title_esame_list">Esami</string>
     <string name="title_esame_detail">Esame Detail</string>
+    <string name="title_sensore_list">Sensori</string>
+    <string name="title_sensore_detail">Sensore Detail</string>
 
 </resources>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LauncherActivity"
+        <activity
+            android:name=".LauncherActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,34 +35,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".RedActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".EsamiActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".DettaglioActivity"></activity>
-
+        <activity android:name=".DettaglioActivity" />
         <activity android:name=".DettaglioViewerActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".master_detail.EsameListActivity"
             android:label="@string/title_esame_list"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".master_detail.EsameDetailActivity"
             android:label="@string/title_esame_detail"
@@ -71,16 +64,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nicola.myapp.master_detail.EsameListActivity" />
         </activity>
-
         <activity android:name=".SchedaStudenteActivity">
             <intent-filter>
-                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-
+        <activity
+            android:name=".sensori.SensoreListActivity"
+            android:label="@string/title_sensore_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".sensori.SensoreDetailActivity"
+            android:label="@string/title_sensore_detail"
+            android:parentActivityName=".sensori.SensoreListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nicola.myapp.sensori.SensoreListActivity" />
+        </activity>
     </application>
 
 </manifest>

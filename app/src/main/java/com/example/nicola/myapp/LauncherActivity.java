@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.nicola.myapp.master_detail.EsameListActivity;
+import com.example.nicola.myapp.sensori.SensoreListActivity;
 
 public class LauncherActivity extends AppCompatActivity {
 
@@ -58,8 +59,18 @@ public class LauncherActivity extends AppCompatActivity {
         myToolbar.setTitle("Pontrandolfo Nicola");
         myToolbar.setSubtitle("610790");
         setSupportActionBar(myToolbar);
+
+        Button btnGoSensori = (Button) findViewById(R.id.btnSensori);
+        btnGoSensori.setOnClickListener(goSensori);
     }
 
+    public View.OnClickListener goSensori = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent vaiAEsami = new Intent(LauncherActivity.this, SensoreListActivity.class);
+            startActivity(vaiAEsami);
+        }
+    };
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

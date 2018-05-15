@@ -4,7 +4,7 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/action_compass"
-        android:icon="@android:drawable/ic_menu_compass"
+        android:icon="@android:drawable/ic_dialog_alert"
         android:title="azione"
         app:showAsAction="ifRoom"/>
     <item

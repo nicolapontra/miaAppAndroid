@@ -33,12 +33,11 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/editNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="NICOLA" />
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -48,7 +47,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/editCognome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -63,7 +62,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/editNascita"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -84,7 +83,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/editSito"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -130,7 +129,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/editEsami1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -147,7 +146,7 @@
 
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/editEsami2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -163,7 +162,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/editMedia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -193,7 +192,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/editCell1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -209,7 +208,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText9"
+                android:id="@+id/editCell2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -224,7 +223,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/editCell3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
