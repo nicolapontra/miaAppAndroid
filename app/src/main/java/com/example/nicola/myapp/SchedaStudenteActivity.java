@@ -14,6 +14,8 @@ import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.ToggleButton;
 
+import java.util.Calendar;
+
 public class SchedaStudenteActivity extends AppCompatActivity {
 
     EditText editNome;
@@ -33,9 +35,10 @@ public class SchedaStudenteActivity extends AppCompatActivity {
 
     Button changeData;
     static final int DATE_DIALOG_ID = 0;
-    private int mYear;
-    private int mMonth;
-    private int mDay;
+    final Calendar c = Calendar.getInstance();
+    private int mYear = c.get(Calendar.YEAR);
+    private int mMonth = c.get(Calendar.MONTH);
+    private int mDay = c.get(Calendar.DAY_OF_MONTH);
 
     //---------------------------------------------------------------------
     private static final String SCHEDA_PREF = "com.example.nicola.myapp.SCHEDASTUDENTE_PREF";
@@ -88,6 +91,19 @@ public class SchedaStudenteActivity extends AppCompatActivity {
         //------------------------------------------------------------------------------------------
         SharedPreferences preferences = getSharedPreferences(SCHEDA_PREF, Context.MODE_PRIVATE);
         editNome.setText(preferences.getString("nome", ""));
+        editCognome.setText(preferences.getString("cognome", ""));
+        editDataNasc.setText(preferences.getString("datanascita", ""));
+        editSito.setText(preferences.getString("sitoweb", ""));
+        editEsamiok.setText(preferences.getString("esamisvolti", ""));
+        editEsamiDaFare.setText(preferences.getString("esamidafare", ""));
+        editMedia.setText(preferences.getString("media", ""));
+        editCell1.setText(preferences.getString("cellulare1", ""));
+        editCell2.setText(preferences.getString("cellulare2", ""));
+        editCell3.setText(preferences.getString("cellulare3", ""));
+        maschio.setChecked(preferences.getBoolean("maschio",false));
+        femmina.setChecked(preferences.getBoolean("femmina",false));
+        rating.setRating(preferences.getFloat("rating",0));
+
 
 
     }//end onCreate------------------_______-------------------_____________-------------------
@@ -147,6 +163,19 @@ public class SchedaStudenteActivity extends AppCompatActivity {
                 SharedPreferences preferences = getSharedPreferences(SCHEDA_PREF, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("nome", editNome.getText().toString());
+                editor.putString("cognome", editCognome.getText().toString());
+                editor.putString("datanascita", editDataNasc.getText().toString());
+                editor.putString("sitoweb", editSito.getText().toString());
+                editor.putString("esamisvolti", editEsamiok.getText().toString());
+                editor.putString("esamidafare", editEsamiDaFare.getText().toString());
+                editor.putString("media", editMedia.getText().toString());
+                editor.putString("cellulare1", editCell1.getText().toString());
+                editor.putString("cellulare2", editCell2.getText().toString());
+                editor.putString("cellulare3", editCell3.getText().toString());
+                editor.putBoolean("maschio",maschio.isChecked());
+                editor.putBoolean("femmina",femmina.isChecked());
+                editor.putFloat("rating",rating.getRating());
+
                 editor.apply();
                 editNome.setFocusable(false);
                 editCognome.setFocusable(false);

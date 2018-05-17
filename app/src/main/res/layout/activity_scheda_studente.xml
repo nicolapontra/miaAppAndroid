@@ -51,8 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="PONTRANDOLFO" />
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -66,8 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="02/04/1988" />
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/btnChangeData"
@@ -87,8 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="www.nicolapontra.com" />
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -108,7 +105,6 @@
                     android:id="@+id/radiobtn1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="maschio"
                     android:textSize="18sp" />
 
@@ -134,8 +130,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:scrollbars="horizontal"
-                android:text="Analisi 1, Programmazione 1, Programmazione2, Sviluppo Mobile, Calcolo numerico" />
+                android:scrollbars="horizontal" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -151,8 +146,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:scrollbars="horizontal"
-                android:text="Sisag, Sistemi informativi per il web, Modelli e metodi per la qualità del SW, Fisica" />
+                android:scrollbars="horizontal" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -166,8 +160,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="24" />
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -181,7 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:rating="4"
+                android:rating="0"
                 android:stepSize="1" />
 
             <TextView
@@ -196,8 +189,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="3288017730" />
+                android:inputType="textPersonName" />
 
 
             <TextView
@@ -212,8 +204,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="3288017733" />
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -227,8 +218,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="3288017734" />
+                android:inputType="textPersonName" />
 
             <ToggleButton
                 android:id="@+id/toggleButton"
