@@ -43,6 +43,9 @@ public class SchedaStudenteActivity extends AppCompatActivity {
     //---------------------------------------------------------------------
     private static final String SCHEDA_PREF = "com.example.nicola.myapp.SCHEDASTUDENTE_PREF";
 
+    //istanza del db
+    StudenteDbHelper mDbHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +92,7 @@ public class SchedaStudenteActivity extends AppCompatActivity {
         });
 
         //------------------------------------------------------------------------------------------
-        SharedPreferences preferences = getSharedPreferences(SCHEDA_PREF, Context.MODE_PRIVATE);
+       /* SharedPreferences preferences = getSharedPreferences(SCHEDA_PREF, Context.MODE_PRIVATE);
         editNome.setText(preferences.getString("nome", ""));
         editCognome.setText(preferences.getString("cognome", ""));
         editDataNasc.setText(preferences.getString("datanascita", ""));
@@ -102,7 +105,10 @@ public class SchedaStudenteActivity extends AppCompatActivity {
         editCell3.setText(preferences.getString("cellulare3", ""));
         maschio.setChecked(preferences.getBoolean("maschio",false));
         femmina.setChecked(preferences.getBoolean("femmina",false));
-        rating.setRating(preferences.getFloat("rating",0));
+        rating.setRating(preferences.getFloat("rating",0));*/
+
+        //creazione istanza db
+        mDbHelper = new StudenteDbHelper(this);
 
 
 
@@ -160,7 +166,7 @@ public class SchedaStudenteActivity extends AppCompatActivity {
                 rating.setClickable(true);
             } else {
 
-                SharedPreferences preferences = getSharedPreferences(SCHEDA_PREF, Context.MODE_PRIVATE);
+              /*  SharedPreferences preferences = getSharedPreferences(SCHEDA_PREF, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("nome", editNome.getText().toString());
                 editor.putString("cognome", editCognome.getText().toString());
@@ -176,7 +182,10 @@ public class SchedaStudenteActivity extends AppCompatActivity {
                 editor.putBoolean("femmina",femmina.isChecked());
                 editor.putFloat("rating",rating.getRating());
 
-                editor.apply();
+                editor.apply();*/
+
+              //salvare i dati inseriti nel db
+
                 editNome.setFocusable(false);
                 editCognome.setFocusable(false);
                 editDataNasc.setFocusable(false);
