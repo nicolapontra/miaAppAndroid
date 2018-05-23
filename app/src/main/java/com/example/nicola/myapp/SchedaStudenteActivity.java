@@ -2,8 +2,11 @@ package com.example.nicola.myapp;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +15,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.Calendar;
@@ -45,7 +49,8 @@ public class SchedaStudenteActivity extends AppCompatActivity {
 
     //istanza del db
     StudenteDbHelper mDbHelper;
-
+        //path adb
+    //C:\Users\Nicola\AppData\Local\Android\Sdk\platform-tools
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +115,38 @@ public class SchedaStudenteActivity extends AppCompatActivity {
         //creazione istanza db
         mDbHelper = new StudenteDbHelper(this);
 
+        //popolamento scheda
+
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+        Cursor c = db.query(
+                StudenteDbHelper.STUDENTE_TABLE_NAME,
+                new String[]{StudenteDbHelper.COLONNA_NOME,StudenteDbHelper.COLONNA_COGNOME,
+                StudenteDbHelper.COLONNA_NASCITA,StudenteDbHelper.COLONNA_SITOWEB,StudenteDbHelper.COLONNA_MASCHIO,
+                StudenteDbHelper.COLONNA_FEMMINA,StudenteDbHelper.COLONNA_ESAMIOK,StudenteDbHelper.COLONNA_ESAMIDAFARE,
+                StudenteDbHelper.COLONNA_MEDIA,StudenteDbHelper.COLONNA_RATING,StudenteDbHelper.COLONNA_NUM1,
+                StudenteDbHelper.COLONNA_NUM2,StudenteDbHelper.COLONNA_NUM3},
+                null,
+                null,
+                null,
+                null,
+                null
+                );
+        c.moveToFirst();
+        while (c.moveToNext()) {
+            editNome.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_NOME)));
+            editCognome.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_COGNOME)));
+            editDataNasc.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_NASCITA)));
+            editSito.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_SITOWEB)));
+            maschio.setChecked(Boolean.parseBoolean(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_MASCHIO))));
+            femmina.setChecked(Boolean.parseBoolean(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_FEMMINA))));
+            editEsamiok.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_ESAMIOK)));
+            editEsamiDaFare.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_ESAMIDAFARE)));
+            editMedia.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_MEDIA)));
+            rating.setRating(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_RATING));
+            editCell1.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_NUM1)));
+            editCell2.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_NUM2)));
+            editCell3.setText(c.getString(c.getColumnIndexOrThrow(StudenteDbHelper.COLONNA_NUM3)));
+        }
 
 
     }//end onCreate------------------_______-------------------_____________-------------------
@@ -165,6 +202,30 @@ public class SchedaStudenteActivity extends AppCompatActivity {
                 femmina.setClickable(true);
                 rating.setClickable(true);
             } else {
+
+                SQLiteDatabase db = mDbHelper.getWritableDatabase();
+                ContentValues values = new ContentValues();
+                values.put(StudenteDbHelper.COLONNA_NOME, editNome.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_COGNOME,editCognome.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_NASCITA,editDataNasc.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_SITOWEB,editSito.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_ESAMIOK,editEsamiok.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_ESAMIDAFARE,editEsamiDaFare.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_MEDIA,editMedia.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_NUM1,editCell1.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_NUM2,editCell2.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_NUM3,editCell3.getText().toString());
+                values.put(StudenteDbHelper.COLONNA_MASCHIO,maschio.isChecked());
+                values.put(StudenteDbHelper.COLONNA_FEMMINA,femmina.isChecked());
+                values.put(StudenteDbHelper.COLONNA_RATING,rating.getRating());
+
+                long newRowId;
+                newRowId = db.insert(
+                        StudenteDbHelper.STUDENTE_TABLE_NAME,
+                        null,
+                        values);
+                Toast toast = Toast.makeText(getApplicationContext(),"Salvataggio completato",Toast.LENGTH_LONG);
+                toast.show();
 
               /*  SharedPreferences preferences = getSharedPreferences(SCHEDA_PREF, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
