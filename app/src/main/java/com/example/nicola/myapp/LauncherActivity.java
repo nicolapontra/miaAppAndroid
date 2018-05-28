@@ -14,6 +14,9 @@ import android.widget.TextView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.nicola.myapp.chat.BluetoothChatActivity;
+import com.example.nicola.myapp.fragmentQuoteViewerWithActivity.EsamiActivity;
+import com.example.nicola.myapp.fragment_static_layout.DettaglioViewerActivity;
 import com.example.nicola.myapp.master_detail.EsameListActivity;
 import com.example.nicola.myapp.sensori.SensoreListActivity;
 
@@ -62,7 +65,19 @@ public class LauncherActivity extends AppCompatActivity {
 
         Button btnGoSensori = (Button) findViewById(R.id.btnSensori);
         btnGoSensori.setOnClickListener(goSensori);
+
+        Button btnGoChat = (Button) findViewById(R.id.btnBtChat);
+        btnGoChat.setOnClickListener(goChatBt);
     }
+
+    public View.OnClickListener goChatBt = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent vaiAChat = new Intent(LauncherActivity.this, BluetoothChatActivity.class);
+            startActivity(vaiAChat);
+        }
+    };
+
 
     public View.OnClickListener goSensori = new View.OnClickListener() {
         @Override

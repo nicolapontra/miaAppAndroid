@@ -1,9 +1,10 @@
-package com.example.nicola.myapp;
+package com.example.nicola.myapp.fragment_static_layout;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.example.nicola.myapp.EsamiFrag.ListSelectionListener;
+import com.example.nicola.myapp.R;
+import com.example.nicola.myapp.fragment_static_layout.EsamiFrag.ListSelectionListener;
 /**
  * Created by Nicola on 26/04/2018.
  */

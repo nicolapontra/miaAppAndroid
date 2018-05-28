@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/secure_connect_scan"
+        android:icon="@drawable/ic_action_name"
+        android:showAsAction="ifRoom"
+        android:title="Connetti a un dispositivo"/>
+
+    <item
+        android:id="@+id/insecure_connect_scan"
+        android:showAsAction="never"
+        android:title="Connessione non sicura"/>
+
+    <item
+        android:id="@+id/discoverable"
+        android:showAsAction="never"
+        android:title="visibile"/>
+</menu>

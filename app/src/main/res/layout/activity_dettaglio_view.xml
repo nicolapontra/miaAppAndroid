@@ -10,14 +10,14 @@
         android:layout_width="0px"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        class="com.example.nicola.myapp.EsamiFrag"/>
+        class="com.example.nicola.myapp.fragment_static_layout.EsamiFrag"/>
 
     <fragment
         android:id="@+id/dettagli"
         android:layout_width="0px"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        class="com.example.nicola.myapp.DettaglioFrag"/>
+        class="com.example.nicola.myapp.fragment_static_layout.DettaglioFrag"/>
 
          />
 </LinearLayout>

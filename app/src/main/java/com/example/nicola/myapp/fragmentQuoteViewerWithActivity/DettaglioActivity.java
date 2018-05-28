@@ -1,9 +1,11 @@
-package com.example.nicola.myapp;
+package com.example.nicola.myapp.fragmentQuoteViewerWithActivity;
 
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+
+import com.example.nicola.myapp.R;
 
 /**
  * Created by Nicola on 26/04/2018.

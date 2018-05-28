@@ -1,4 +1,4 @@
-package com.example.nicola.myapp;
+package com.example.nicola.myapp.fragment_static_layout;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.nicola.myapp.R;
+import com.example.nicola.myapp.fragment_static_layout.DettaglioViewerActivity;
 
 /**
  * Created by Nicola on 26/04/2018.
